@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Reveal, SectionHeading } from '@/components/reveal'
 
-const GITHUB_URL = 'https://github.com/Eman-Fatima-7125'
+// const GITHUB_URL = 'https://github.com/Eman-Fatima-7125'
 
 const PROJECTS = [
   {
