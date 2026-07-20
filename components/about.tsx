@@ -27,7 +27,7 @@ const CARDS = [
     icon: Target,
     title: 'Career Interests',
     lines: [
-      'Frontend Development',
+      'Flutter Development',
       'Software Engineering',
       'Educational Technology',
       'Community Platforms',
@@ -48,7 +48,7 @@ export function About() {
           <Reveal>
             <p className="text-pretty text-lg leading-relaxed text-muted-foreground">
               Motivated and detail-oriented Computer Science undergraduate student with strong
-              interest in web development, software engineering, embedded systems, and
+              interest in flutter development, software engineering, embedded systems, and
               problem-solving. Experienced in designing responsive web applications, educational
               platforms, mobile applications, and hardware-based projects.
             </p>
