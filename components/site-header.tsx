@@ -19,7 +19,7 @@ const NAV_LINKS = [
 
 const GITHUB_URL = 'https://github.com/Eman-Fatima-7125'
 const LINKEDIN_URL = 'https://www.linkedin.com/in/eman-fatima-9975012b6/'
-const RESUME_URL = 'https://eman-fatima-7125.github.io/Portfolio/'
+const RESUME_URL = 'https://drive.google.com/file/d/1vF8v0M9P_xpMMjFeXlfT5GTF1-iZc7At/view?usp=drive_link'
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false)
