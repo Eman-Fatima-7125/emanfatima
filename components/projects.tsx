@@ -10,25 +10,32 @@ const GITHUB_URL = 'https://github.com/Eman-Fatima-7125'
 
 const PROJECTS = [
   {
-    title: 'BrightMind Play / Decision Making Module',
-    description:
-      'A Flutter-based educational therapy module designed to improve decision-making skills among children with autism through interactive learning activities.',
-    image: '/projects/brightmind.png',
-    tech: ['Flutter', 'Dart', 'Firebase', 'UI/UX'],
-  },
+  title: 'Hope Learn / Decision Making Module',
+  description:
+    'A Flutter-based educational therapy module designed to improve decision-making skills among children with autism through interactive learning activities.',
+  image: '/projects/brightmind.png',
+  tech: ['Flutter', 'Dart', 'Firebase', 'UI/UX'],
+  github: 'https://github.com/Eman-Fatima-7125/HopeLearn',
+  demo: 'https://github.com/Eman-Fatima-7125/HopeLearn',
+},
   {
     title: 'Student Hub: E-Commerce Platform',
     description:
       'A web-based community platform allowing university entrepreneurs to showcase, market, and sell their products to fellow students.',
     image: '/projects/studenthub.png',
     tech: ['React', 'Supabase', 'Database'],
+     github: 'https://github.com/Eman-Fatima-7125/Student-Hub',
+  demo: 'https://github.com/Eman-Fatima-7125/Student-Hub',
   },
   {
-    title: 'University Transport Management System',
+    title: 'Console-Based Contact Management System (C)',
     description:
-      'A responsive transport management system with a polished frontend interface and full backend integration for scheduling and bookings.',
+      'a console-based Contact Management System using C programming as an introductory software development project to strengthen fundamental programming and problem-solving skills.',
     image: '/projects/transport.png',
-    tech: ['HTML', 'CSS', 'JavaScript', 'XAMPP'],
+    tech: ['C Programming' , 'File Handling' , 'Data Structures' , 'Problem Solving' , 'Console Application Development'],
+    github: 'https://github.com/Eman-Fatima-7125/Address-Book',
+    demo: 'https://github.com/Eman-Fatima-7125/Address-Book',
+    
   },
   {
     title: 'Google Maps Integrated Route Optimizer',
@@ -36,6 +43,8 @@ const PROJECTS = [
       'Implemented Dijkstra\u2019s Algorithm to calculate optimized routes using graph datasets, integrated with the Google Maps API.',
     image: '/projects/routeoptimizer.png',
     tech: ['Python', 'Algorithms', 'Google Maps API'],
+    github: 'https://github.com/Eman-Fatima-7125/Visualizing-paths-and-interactive-maps',
+    demo: 'https://github.com/Eman-Fatima-7125/Visualizing-paths-and-interactive-maps',
   },
   {
     title: 'Database Driven Courier Management System',
@@ -43,13 +52,9 @@ const PROJECTS = [
       'A Java desktop application built using OOP principles with a MySQL database integration for managing shipments and deliveries.',
     image: '/projects/courier.png',
     tech: ['Java', 'OOP', 'MySQL'],
-  },
-  {
-    title: 'Temperature Based Smart Fan Control',
-    description:
-      'An embedded automation system that controls fan speed dynamically according to temperature readings using PWM signals.',
-    image: '/projects/smartfan.png',
-    tech: ['Arduino', 'DHT22', 'TIP122', 'Proteus'],
+    github: 'https://github.com/Eman-Fatima-7125/Courier-Management-System',
+    demo: 'https://github.com/Eman-Fatima-7125/Courier-Management-System',
+    
   },
   {
     title: 'Salon Website',
@@ -57,6 +62,8 @@ const PROJECTS = [
       'A responsive, conversion-focused business website designed for salon companies with an elegant modern aesthetic.',
     image: '/projects/salon.png',
     tech: ['HTML', 'CSS', 'Bootstrap'],
+    github: 'https://github.com/Eman-Fatima-7125/Faiza-s-Salon-Website',
+    demo: 'https://eman-fatima-7125.github.io/Faiza-s-Salon-Website/',
   },
   {
     title: 'Event Management Website',
@@ -64,6 +71,8 @@ const PROJECTS = [
       'A responsive corporate event management website with schedules, listings, and a clean professional interface.',
     image: '/projects/event.png',
     tech: ['HTML', 'CSS', 'Bootstrap'],
+    github: 'https://github.com/Eman-Fatima-7125/Event-Management-',
+    demo: 'https://eman-fatima-7125.github.io/Event-Management-/',
   },
 ]
 
