@@ -23,28 +23,28 @@ export async function sendContactEmail(payload: ContactPayload) {
   const phoneLine = payload.phone ? `\nPhone: ${payload.phone}` : ''
 
   const { error } = await resend.emails.send({
-    from,
-    to: [to],
-    replyTo: payload.email,
-    subject: `Portfolio contact from ${payload.name}`,
-    text: [
-      `New message from your portfolio contact form`,
-      '',
-      `Name: ${payload.name}`,
-      `Email: ${payload.email}${phoneLine}`,
-      '',
-      'Message:',
-      payload.message,
-    ].join('\n'),
-    html: `
-      <h2>New portfolio contact message</h2>
-      <p><strong>Name:</strong> ${escapeHtml(payload.name)}</p>
-      <p><strong>Email:</strong> <a href="mailto:${escapeHtml(payload.email)}">${escapeHtml(payload.email)}</a></p>
-      ${payload.phone ? `<p><strong>Phone:</strong> ${escapeHtml(payload.phone)}</p>` : ''}
-      <p><strong>Message:</strong></p>
-      <p style="white-space: pre-wrap;">${escapeHtml(payload.message)}</p>
-    `.trim(),
-  })
+  from: 'onboarding@resend.dev',
+  to: ['emantariq197@gmail.com'],
+  replyTo: payload.email,
+  subject: `Portfolio contact from ${payload.name}`,
+  text: [
+    `New message from your portfolio contact form`,
+    '',
+    `Name: ${payload.name}`,
+    `Email: ${payload.email}${phoneLine}`,
+    '',
+    'Message:',
+    payload.message,
+  ].join('\n'),
+  html: `
+    <h2>New portfolio contact message</h2>
+    <p><strong>Name:</strong> ${escapeHtml(payload.name)}</p>
+    <p><strong>Email:</strong> ${escapeHtml(payload.email)}</p>
+    ${payload.phone ? `<p><strong>Phone:</strong> ${escapeHtml(payload.phone)}</p>` : ''}
+    <p><strong>Message:</strong></p>
+    <p style="white-space: pre-wrap;">${escapeHtml(payload.message)}</p>
+  `.trim(),
+})
 
   if (error) {
     throw new Error(error.message)
