@@ -76,6 +76,7 @@ const PROJECTS = [
   },
 ]
 
+
 export function Projects() {
   return (
     <section id="projects" className="scroll-mt-24 py-20 lg:py-28">
