@@ -32,7 +32,7 @@ export async function POST(request: Request) {
     const { error } = await resend.emails.send({
       from: 'onboarding@resend.dev',
 
-      to: ['emantariq197@gmail.com'],
+      to: ['fatima.eman.7125@gmail.com'],
 
       replyTo: email,
 
