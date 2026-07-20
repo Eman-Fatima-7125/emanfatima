@@ -143,7 +143,7 @@ export function Projects() {
                       nativeButton={false}
                       className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90"
                       render={
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">>
+                      <a href={project.github} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="size-4" aria-hidden />
                           Demo
                         </a>
