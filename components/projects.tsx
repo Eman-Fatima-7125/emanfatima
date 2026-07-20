@@ -177,7 +177,7 @@ const PROJECTS = [
     title: 'Hope Learn / Decision Making Module',
     description:
       'A Flutter-based educational therapy module designed to improve decision-making skills among children with autism through interactive learning activities.',
-    image: '/projects/hopelearn.jpeg',
+    image: '/projects/decision_making.jpeg',
     tech: ['Flutter', 'Dart', 'Firebase', 'UI/UX'],
     github: 'https://github.com/Eman-Fatima-7125/HopeLearn',
     demo: 'https://github.com/Eman-Fatima-7125/HopeLearn',
