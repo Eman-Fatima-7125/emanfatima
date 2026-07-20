@@ -9,7 +9,7 @@ import { Label } from '@/components/ui/label'
 import { Button } from '@/components/ui/button'
 import { Reveal, SectionHeading } from '@/components/reveal'
 
-const EMAIL = 'emantariq197@gmail.com'
+const EMAIL = 'fatima.eman.7125@gmail.com'
 const PHONE = '0330 5916492'
 const LOCATION = 'Rawalpindi, Pakistan'
 const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=Rawalpindi,Pakistan'
