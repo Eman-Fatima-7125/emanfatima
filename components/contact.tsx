@@ -15,7 +15,7 @@ const LOCATION = 'Rawalpindi, Pakistan'
 const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=Rawalpindi,Pakistan'
 
 const CONTACT_DETAILS = [
-  { icon: Mail, label: 'Email', value: EMAIL, href: `mailto:${EMAIL}` },
+  { icon: Mail, label: 'Email', value: EMAIL, href: `mailto:${emantariq197@gmailcom}` },
   { icon: Phone, label: 'Phone', value: PHONE, href: 'tel:+923305916492' },
   { icon: MapPin, label: 'Location', value: LOCATION, href: MAPS_URL },
 ]
