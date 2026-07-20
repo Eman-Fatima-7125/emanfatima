@@ -21,7 +21,6 @@ const EXPERIENCE = [
   'Assisted in developing and maintaining software solutions for company requirements',
   'Collaborated with the development team to implement and improve application features',
   'Performed debugging, testing, and optimization to enhance software performance',
-]
     ],
   },
 ]
