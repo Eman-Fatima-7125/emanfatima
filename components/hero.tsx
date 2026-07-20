@@ -14,8 +14,8 @@ import { Button } from '@/components/ui/button'
 
 const ROLES = [
   'Computer Science Student',
-  'Frontend Developer',
   'Flutter Developer',
+  'Frontend Developer',
   'Problem Solver',
   'Technology Enthusiast',
 ]
