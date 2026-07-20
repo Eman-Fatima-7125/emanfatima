@@ -177,7 +177,7 @@ const PROJECTS = [
     title: 'Hope Learn / Decision Making Module',
     description:
       'A Flutter-based educational therapy module designed to improve decision-making skills among children with autism through interactive learning activities.',
-    image: '/projects/brightmind.png',
+    image: '/projects/hopelearn.jpeg',
     tech: ['Flutter', 'Dart', 'Firebase', 'UI/UX'],
     github: 'https://github.com/Eman-Fatima-7125/HopeLearn',
     demo: 'https://github.com/Eman-Fatima-7125/HopeLearn',
@@ -232,7 +232,7 @@ const PROJECTS = [
     title: 'Salon Website',
     description:
       'A responsive, conversion-focused business website designed for salon companies with an elegant modern aesthetic.',
-    image: '/projects/salon.png',
+    image: '/projects/salon.jpeg',
     tech: ['HTML', 'CSS', 'Bootstrap'],
     github:
       'https://github.com/Eman-Fatima-7125/Faiza-s-Salon-Website',
@@ -243,7 +243,7 @@ const PROJECTS = [
     title: 'Event Management Website',
     description:
       'A responsive corporate event management website with schedules, listings, and a clean professional interface.',
-    image: '/projects/event.png',
+    image: '/projects/events.jpeg',
     tech: ['HTML', 'CSS', 'Bootstrap'],
     github:
       'https://github.com/Eman-Fatima-7125/Event-Management-',
