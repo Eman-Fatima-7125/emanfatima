@@ -84,6 +84,7 @@ export async function sendContactEmail(data: ContactData) {
   if (response.error) {
     throw new Error(response.error.message)
   }
+  
 
   return response
 }
