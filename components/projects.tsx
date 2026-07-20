@@ -132,8 +132,8 @@ export function Projects() {
                       nativeButton={false}
                       className="flex-1 border-border bg-transparent hover:border-primary/50 hover:text-primary"
                       render={
-                        <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
-                          <FaGithub className="size-4" aria-hidden />
+<a href={project.github} target="_blank" rel="noopener noreferrer">
+  <FaGithub className="size-4" aria-hidden />
                           Code
                         </a>
                       }
@@ -143,7 +143,7 @@ export function Projects() {
                       nativeButton={false}
                       className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90"
                       render={
-                        <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
+                      <a href={project.github} target="_blank" rel="noopener noreferrer">>
                           <ExternalLink className="size-4" aria-hidden />
                           Demo
                         </a>
