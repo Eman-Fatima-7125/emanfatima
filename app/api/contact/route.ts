@@ -1,37 +1,7 @@
-// import { NextResponse } from 'next/server'
-// import { validateContactPayload } from '@/lib/contact'
-// import { sendContactEmail } from '@/lib/send-contact-email'
-
-// export const runtime = 'nodejs'
-
-// export async function POST(request: Request) {
-//   try {
-//     const body = await request.json()
-//     const result = validateContactPayload(body)
-
-//     if (!result.ok) {
-//       return NextResponse.json({ error: result.error }, { status: 400 })
-//     }
-
-//     await sendContactEmail(result.data)
-
-//     return NextResponse.json({ success: true })
-//   } catch (error) {
-//     console.error('[contact]', error)
-
-//     const message =
-//       error instanceof Error && error.message.includes('RESEND_API_KEY')
-//         ? 'Email service is not configured yet.'
-//         : 'Unable to send your message. Please try again later.'
-
-//     return NextResponse.json({ error: message }, { status: 500 })
-//   }
-// }
-
-
-
-
+import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
+
+export const runtime = 'nodejs'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -42,49 +12,75 @@ type ContactData = {
   message: string
 }
 
-export async function sendContactEmail(data: ContactData) {
-  if (!process.env.RESEND_API_KEY) {
-    throw new Error('RESEND_API_KEY is missing')
+export async function POST(request: Request) {
+  try {
+    if (!process.env.RESEND_API_KEY) {
+      throw new Error('RESEND_API_KEY is missing')
+    }
+
+    const body = (await request.json()) as ContactData
+
+    const { name, email, phone, message } = body
+
+    if (!name || !email || !message) {
+      return NextResponse.json(
+        { error: 'Required fields are missing' },
+        { status: 400 }
+      )
+    }
+
+    const { error } = await resend.emails.send({
+      from: 'onboarding@resend.dev',
+
+      to: ['emantariq197@gmail.com'],
+
+      replyTo: email,
+
+      subject: `New Portfolio Contact Message from ${name}`,
+
+      html: `
+        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+          <h2>New Contact Form Submission</h2>
+
+          <p><strong>Name:</strong> ${name}</p>
+
+          <p><strong>Email:</strong> ${email}</p>
+
+          ${
+            phone
+              ? `<p><strong>Phone:</strong> ${phone}</p>`
+              : ''
+          }
+
+          <p><strong>Message:</strong></p>
+
+          <p>
+            ${message.replace(/\n/g, '<br />')}
+          </p>
+        </div>
+      `,
+    })
+
+    if (error) {
+      throw new Error(error.message)
+    }
+
+    return NextResponse.json(
+      { success: true },
+      { status: 200 }
+    )
+
+  } catch (error) {
+    console.error('[contact]', error)
+
+    return NextResponse.json(
+      {
+        error:
+          error instanceof Error
+            ? error.message
+            : 'Unable to send message',
+      },
+      { status: 500 }
+    )
   }
-
-  const { name, email, phone, message } = data
-
-  const response = await resend.emails.send({
-    // Keep this until you verify your own custom domain in Resend
-    from: 'onboarding@resend.dev',
-
-    // Your receiving email
-    to: 'emantariq197@gmail.com',
-
-    subject: `New Portfolio Contact Message from ${name}`,
-
-    html: `
-      <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-        <h2>New Contact Form Submission</h2>
-
-        <p><strong>Name:</strong> ${name}</p>
-
-        <p><strong>Email:</strong> ${email}</p>
-
-        ${
-          phone
-            ? `<p><strong>Phone:</strong> ${phone}</p>`
-            : ''
-        }
-
-        <p><strong>Message:</strong></p>
-
-        <p>
-          ${message.replace(/\n/g, '<br />')}
-        </p>
-      </div>
-    `,
-  })
-
-  if (response.error) {
-    throw new Error(response.error.message)
-  }
-  
-
-  return response
 }
