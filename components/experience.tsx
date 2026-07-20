@@ -15,12 +15,13 @@ const EXPERIENCE = [
   },
   {
     icon: Megaphone,
-    role: 'Marketing Intern',
-    org: 'Eco Zindagi Pvt Ltd',
-    points: [
-      'Executed digital marketing activities',
-      'Contributed to content strategy and planning',
-      'Supported brand promotion campaigns',
+   role: 'Junior Software Development Intern',
+   org: 'Eco Zindagi Pvt Ltd',
+   points: [
+  'Assisted in developing and maintaining software solutions for company requirements',
+  'Collaborated with the development team to implement and improve application features',
+  'Performed debugging, testing, and optimization to enhance software performance',
+]
     ],
   },
 ]
