@@ -61,9 +61,10 @@ export async function POST(request: Request) {
       `,
     })
 
-    if (error) {
-      throw new Error(error.message)
-    }
+   if (error) {
+  console.error("RESEND ERROR:", error)
+  throw new Error(JSON.stringify(error))
+}
 
     return NextResponse.json(
       { success: true },
